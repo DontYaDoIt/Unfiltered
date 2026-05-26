@@ -1,1 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: #1e1f22;
+    font-family: 'Inter', 'Whitney', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.gift-card {
+    background: rgba(30, 31, 34, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 32px;
+    max-width: 520px;
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(88,101,242,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gift-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px -12px black;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-header {
+    background: linear-gradient(135deg, #23272a 0%, #1a1c1e 100%);
+    border-radius: 32px 32px 24px 24px;
+    padding: 32px 28px 24px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nitro-icon {
+    background: linear-gradient(145deg, #ff73fa, #5865f2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 15px 35px rgba(88,101,242,0.4);
+}
+
+.nitro-icon span {
+    font-size: 48px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff, #b5bac1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.badge {
+    background: rgba(88,101,242,0.2);
+    backdrop-filter: blur(4px);
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #b5bac1;
+    margin-top: 12px;
+    border: 1px solid rgba(88,101,242,0.4);
+}
+
+.card-body {
+    padding: 28px;
+}
+
+.perk-list {
+    background: rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+}
+
+.perk {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+    font-size: 15px;
+    color: #dbdee2;
+}
+
+.perk .emoji {
+    font-size: 22px;
+    min-width: 36px;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+    margin: 20px 0;
+}
+
+.claim-btn {
+    background: linear-gradient(90deg, #5865f2, #7983f5);
+    width: 100%;
+    border: none;
+    border-radius: 44px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 8px 20px rgba(88,101,242,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.claim-btn:hover {
+    background: linear-gradient(90deg, #4752c4, #636ee0);
+    transform: scale(1.02);
+    box-shadow: 0 12px 28px rgba(88,101,242,0.5);
+}
+
+.claim-btn:active {
+    transform: scale(0.98);
+}
+
+.footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: #80848e;
+    margin-top: 24px;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.glow {
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+    background-size: 200% 100%;
+}
